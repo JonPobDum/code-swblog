@@ -16,13 +16,12 @@ class Usuario(Base):
     Apellido = Column(String(250), nullable=False)
     Correo = Column(String(250), nullable=False)
 
-class Personajes(Base):
-    __tablename__ = 'Personajes'
-    Personaje_ID = Column(Integer, primary_key=True)
+class Peliculas(Base):
+    __tablename__ = 'Peliculas'
+    Pelicula_ID = Column(Integer, primary_key=True)
     Nombre = Column(String(250), nullable=False )
-    Genero = Column(String(50), nullable=True)
-    Altura = Column(Integer, nullable=False)
-    Peso = Column(Integer, nullable=False)
+    Trilogia = Column(String(50), nullable=True)
+    Estreno = Column(Integer, nullable=False)
 
 class Planetas(Base):
     __tablename__ = 'Planetas'
@@ -32,6 +31,13 @@ class Planetas(Base):
     Poblacion= Column(Integer, nullable=False)
     diametro= Column(Integer, nullable=False)
 
+class Personajes(Base):
+    __tablename__ = 'Planetas'
+    Personaje_ID = Column(Integer, primary_key=True)
+    Nombre_personaje= Column(String(50), nullable=False )
+    Lado_Fuerza= Column(String(250), nullable=False)
+    Primera_Aparicion= Column(Integer, nullable=False)
+    Estado = Column(Integer, nullable=False)
 
 class Personajes_Favoritos(Base):
     __tablename__ = 'Personajes Favoritos'
